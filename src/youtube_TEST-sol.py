@@ -41,8 +41,8 @@ def test_video_mas_likeability_por_categoria(videos):
     k = 20
     print("Vídeo con más likeability por categoría con constante", k)
     dicc = video_mas_likeability_por_categoria(videos, k)
-    for categoria, id_video in dicc.items():
-        print(categoria, '-->', id_video)
+    for categoria, video in dicc.items():
+        print(categoria, '-->', video.id_video)
 
 def test_incrementos_visitas(videos):
     canal = 'Exatlón'
@@ -56,7 +56,7 @@ def test_incrementos_visitas(videos):
     
 if __name__=="__main__":
     print("\nEJERCICIO 1")
-    videos = lee_trending_videos("../data/MX_youtube_2017_utf8.csv")
+    videos = lee_trending_videos("/home/manuel/Documents/Repositories/Universidad/FP/IS2-2/EX-Youtube_sol/data/MX_Youtube_2017_utf8.csv")
     test_lee_trending_videos(videos)
     
     print("\nEJERCICIO 2")  
